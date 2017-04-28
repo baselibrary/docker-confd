@@ -1,0 +1,8 @@
+FROM baselibrary/baseimage:2.0.0
+MAINTAINER ShawnMa <qsma@thoughtworks.com>
+
+## Packages
+ADD \
+  "https://github.com/kelseyhightower/confd/releases/download/v%%CONFD_RELEASE%%/confd-%%CONFD_RELEASE%%-linux-amd64" /usr/bin/confd
+RUN \
+  chmod a+x /usr/bin/confd
